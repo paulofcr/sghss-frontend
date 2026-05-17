@@ -1,25 +1,108 @@
-body {
-  margin: 0;
-  display: flex;
-  font-family: Arial;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial,sans-serif;
 }
 
-.menu {
-  width: 220px;
-  background: #1e3a8a;
-  color: white;
-  height: 100vh;
-  padding: 20px;
+body{
+  display:flex;
+  background:#f5f7f6;
+  min-height:100vh;
 }
 
-.cards {
-  display: flex;
-  gap: 20px;
-  padding: 20px;
+.sidebar{
+  width:260px;
+  background:#00995d;
+  color:white;
+  padding:30px 20px;
+  transition:.3s;
 }
 
-.cards div {
-  padding: 30px;
-  background: #e5e7eb;
-  border-radius: 10px;
+.sidebar h1{
+  margin-bottom:40px;
+}
+
+.sidebar ul{
+  list-style:none;
+}
+
+.sidebar li{
+  padding:15px;
+  margin-bottom:10px;
+  border-radius:10px;
+  cursor:pointer;
+  transition:.3s;
+}
+
+.sidebar li:hover{
+  background:white;
+  color:#00995d;
+}
+
+main{
+  flex:1;
+  padding:30px;
+}
+
+header{
+  font-size:32px;
+  color:#00995d;
+  margin-bottom:30px;
+  font-weight:bold;
+}
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+}
+
+.cards div{
+  background:white;
+  padding:40px;
+  border-radius:20px;
+  box-shadow:0 4px 12px rgba(0,0,0,.1);
+  font-size:20px;
+  text-align:center;
+  transition:.3s;
+}
+
+.cards div:hover{
+  transform:translateY(-5px);
+}
+
+.menu-btn{
+  display:none;
+}
+
+@media(max-width:768px){
+  .sidebar{
+    position:fixed;
+    left:-260px;
+    height:100%;
+    z-index:1000;
+  }
+
+  .sidebar.active{
+    left:0;
+  }
+
+  .menu-btn{
+    display:block;
+    position:fixed;
+    top:15px;
+    left:15px;
+    z-index:1100;
+    border:none;
+    background:#00995d;
+    color:white;
+    padding:12px;
+    border-radius:8px;
+    font-size:20px;
+  }
+
+  main{
+    padding-top:70px;
+  }
 }
