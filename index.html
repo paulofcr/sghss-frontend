@@ -2,29 +2,36 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>SGHSS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SGHSS - VidaPlus</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <aside class="menu">
-    <h2>SGHSS</h2>
-    <ul>
-      <li>Dashboard</li>
-      <li>Pacientes</li>
-      <li>Agenda</li>
-      <li>Telemedicina</li>
-      <li>Internações</li>
-      <li>Administração</li>
-    </ul>
-  </aside>
 
-  <main>
-    <header>Painel Principal</header>
-    <section class="cards">
-      <div>Consultas Hoje</div>
-      <div>Leitos Ocupados</div>
-      <div>Alertas</div>
-    </section>
-  </main>
+<button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+<aside class="sidebar" id="sidebar">
+  <h1>SGHSS</h1>
+  <ul>
+    <li onclick="trocarTela('Dashboard')">Dashboard</li>
+    <li onclick="trocarTela('Pacientes')">Pacientes</li>
+    <li onclick="trocarTela('Agenda')">Agenda</li>
+    <li onclick="trocarTela('Telemedicina')">Telemedicina</li>
+    <li onclick="trocarTela('Internações')">Internações</li>
+    <li onclick="trocarTela('Administração')">Administração</li>
+  </ul>
+</aside>
+
+<main>
+  <header id="titulo">Dashboard</header>
+
+  <section class="cards" id="cards">
+    <div>Consultas Hoje<br><strong>124</strong></div>
+    <div>Leitos Ocupados<br><strong>87%</strong></div>
+    <div>Alertas<br><strong>6</strong></div>
+  </section>
+</main>
+
+<script src="script.js"></script>
 </body>
 </html>
