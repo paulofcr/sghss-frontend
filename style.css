@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+  display: flex;
+  font-family: Arial;
+}
+
+.menu {
+  width: 220px;
+  background: #1e3a8a;
+  color: white;
+  height: 100vh;
+  padding: 20px;
+}
+
+.cards {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+.cards div {
+  padding: 30px;
+  background: #e5e7eb;
+  border-radius: 10px;
+}
